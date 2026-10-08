@@ -11,6 +11,17 @@ from reportlab.pdfgen import canvas
 
 st.set_page_config(page_title="Next Basket Predictor", page_icon="🛒", layout="wide", initial_sidebar_state="collapsed")
 
+import os as _os
+try:
+    import streamlit as _st
+    with _st.sidebar.expander("🔧 Debug Info"):
+        _st.write(f"GROQ_API_KEY: {'✅ SET' if _os.getenv('GROQ_API_KEY') else '❌ MISSING'}")
+        _st.write(f"POLLINATIONS_KEY: {'✅ SET' if _os.getenv('POLLINATIONS_KEY') else '❌ MISSING'}")
+        _st.write(f"First 8 chars GROQ: {_os.getenv('GROQ_API_KEY', '')[:8] or '(empty)'}")
+except Exception as _e:
+    pass
+
+
 if "theme" not in st.session_state:
     st.session_state.theme = "Light"
 if "domain" not in st.session_state:
