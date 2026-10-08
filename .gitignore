@@ -1,0 +1,27 @@
+__pycache__/
+*.pyc
+*.pyo
+.env
+*.env
+.streamlit/secrets.toml
+reports/
+figures/
+results/
+*.log
+.DS_Store
+Thumbs.db
+.ipynb_checkpoints/
+
+data/instacart/orders.csv
+data/instacart/order_products__prior.csv
+data/instacart/order_products__train.csv
+data/pharmacy/disp_pitc202410.csv
+data/processed/nhs_clean.csv
+data/processed/grocery_train.pkl
+data/processed/grocery_val.pkl
+data/processed/grocery_test.pkl
+data/processed/pharmacy_train.pkl
+data/processed/pharmacy_val.pkl
+data/processed/pharmacy_test.pkl
+"NEXT MARKET PREDICT.ipynb" 
+"*.ipynb" 
